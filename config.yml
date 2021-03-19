@@ -1,0 +1,46 @@
+num_docs_for_train: 100      # randomly sample x docs for train each epoch
+num_docs_for_eval: 100        # randomly sample x docs for eval each epoch
+
+train_for_x_epochs : 150
+
+eval_every_x_epochs : 10
+
+use_real_glove : True       # if False: use only tiny sample_glove file for testing
+
+recompute_embeddings : True
+save_embeddings_to_file : False
+load_embeddings_from_file : False
+# path of files to load word-embeddings from
+glove_pt: /Users/nico/UP/03-PM-Coref/datasets-and-notebook/__my_e2e/glove_weights_sav.pt
+turian_pt: /Users/nico/UP/03-PM-Coref/datasets-and-notebook/__my_e2e/turian_weights_sav.pt
+
+use_my_loss: False
+
+save_model_every_x_epochs: 5
+
+use_full_data: True
+
+
+recompute_datasets: True
+save_vocab_and_genre_set_to_file: False
+
+load_only_evaluation_dataset: False
+load_vocab_and_genre_set: False
+load_pretrained_model_from_file: False
+coref_model_path: '/Users/nico/UP/03-PM-Coref/datasets-and-notebook/__my_e2e/model_savs/2021-03-17_12:45:47.367525.pth'
+
+DATA_DIR: /Users/nico/UP/03-PM-Coref/datasets-and-notebook/flat
+TRAIN_DIR: flat_train_2012      # 2802 documents in 1940 conll files
+DEV_DIR: flat_dev_2012          # 343
+TEST_DIR: flat_test_2012        # 348
+
+TRAIN_DIR_MIN: pseudo_train
+DEV_DIR_MIN: pseudo_dev
+TEST_DIR_MIN: pseudo_test
+
+
+GLOVE_FILE_300_SAMPLE: /Users/nico/UP/reduce-clutter/glove/glove.6B.300d.sample.txt
+GLOVE_FILE_300_FULL: /Volumes/ExFat-Parti/word_vectors/glove.840B.300d.txt
+TURIAN_FILE_50: /Users/nico/UP/reduce-clutter/glove/hlbl-embeddings-scaled.EMBEDDING_SIZE=50.txt
+
+eval_script_path: /Users/nico/Documents/__my_e2e/eval/scorer.pl
